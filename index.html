@@ -34,7 +34,7 @@
   <body style="margin : 0px; overflow: hidden;">
     <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
     <div class="arjs-loader">
-      <div>Loading, please wait.</div>
+      <div>Loading, please wait..</div>
     </div>
 
     <!-- a-frame scene -->
@@ -54,11 +54,8 @@
         smoothTolerance=".01"
         smoothThreshold="5">
 
-                <a-image src="image.png"
-          position= "0 1 0"
-          scale= "1 1 1"
-          rotation="0 2 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
-        />
+              <a-plane color="#FFF" height="10" width="10" rotation="45 45 45" position="0 0 0"></a-plane>
+
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
