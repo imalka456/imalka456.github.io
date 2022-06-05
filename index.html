@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Image based tracking AR.js demo</title>
-    <!-- import aframe and then ar.js with image tracking / location based features -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'>
+</script>
+<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js">
+</script>
 
-    <!-- style for the loader -->
-    <style>
-      .arjs-loader {
+<style>
+    .arjs-loader {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -21,44 +16,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      }
+    }
 
-      .arjs-loader div {
+    .arjs-loader div {
         text-align: center;
         font-size: 1.25em;
         color: white;
-      }
-    </style>
-  </head>
+    }
+</style>
 
-  <body style="margin : 0px; overflow: hidden;">
-    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+
+<body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-      <div>Loading, please wait.</div>
+        <div>Loading, please wait...</div>
     </div>
-
-    <!-- a-frame scene -->
-    <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-      <!-- a-nft is the anchor that defines an Image Tracking entity -->
-      <!-- on 'url' use the path to the Image Descriptors created before. -->
-      <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
-      <a-nft
-        type="nft"
-        url="assets/dinosaur/IMG_02641"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5">
-
-              <a-plane color="#FFF" height="100" width="100" rotation="0 0 0" position="0 0 0"></a-plane>
-
-      </a-nft>
-      <!-- static camera that moves according to the device movemenents -->
-      <a-entity camera></a-entity>
+    <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded
+        arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+ <a-nft type='nft' url="assets/dinosaur/IMG_02641" smooth='true' smoothCount='10' smoothTolerance='0.01'
+            smoothThreshold='5'>
+            <a-plane color="cyan" rotation="-90 0 0" scale="200 275 200" position="50 0 -200" material="transparent: true; opacity: 0.9">
+                <a-entity scale="0.19 0.19 0.19" material="transparent: false">
+                    <a-text value="Agama Pelacur: Dramaturgi Transendental" anchor="center" align="center" color="red"
+                        position="0 2 0.2" transparent: false></a-text>
+                    <a-text value="Writers: Prof. Dr. Nur Syam, M.Si" anchor="center" align="left" color="red"
+                        position="0 1.3 0.2"></a-text>
+                    <a-text value="Sinopsis: lalalallalalalallalalallalalalalalallalallalalalalalalalalalalla"
+                        color="red" anchor="center" align="left" position="0 0.75 0.2"></a-text>
+                    <a-text value="Available: 5 copies" anchor="center" align="left" color="blue" position="0 -1.5 0.2">
+                    </a-text>
+                </a-entity>
+            </a-plane>
+        </a-nft>
+<a-entity camera></a-entity>
     </a-scene>
-  </body>
-</html>
+</body>
