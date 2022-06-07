@@ -10,8 +10,8 @@
       <a-assets>
         <img id="card" src="/assets/targets.png" />
                 <a-mixin id="text"
-            text="align: left; baseline: top; width: 3; font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; 
-    value: TIN OF SUSTAGEN 400G.\n Price: 2700.00 \n A great tasting, nutritious drink that provides essential nutrition without negatively impacting blood glucose levels. \n Recommended consumption 2 serves per day.">
+            text="align: left; baseline: top; font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; 
+    value: TIN OF SUSTAGEN 400G.\n \n Price: 2700.00 \n \n A great tasting, nutritious drink that provides essential nutrition without negatively impacting blood glucose levels. \n \n Recommended consumption 2 serves per day.">
         </a-mixin>
       </a-assets>
 
@@ -19,7 +19,7 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane color="white" opaciy="0.2" position="0 0 0" height="1.362" width="1" rotation="0 0 0"></a-plane>
         <a-plane src="#card" position="-0.3 -0.45 0.1" height="0.325" width="0.25" rotation="0 0 0"></a-plane>
-        <a-text mixin="text" height="1.362" width="1" position="0 0 0.1" rotation="0 0 0" color="black"></a-text>
+        <a-text mixin="text" position="0 0 0.1" rotation="0 0 0" color="black"></a-text>
       </a-entity>
     </a-scene>
   </body>
